@@ -21,8 +21,8 @@ class Account:
 
 class Bank:
     def __init__(self):
-        self.customers = {1: ['Sean', 'Lan']}
-        self.accounts = {100: ['1', 'Checking', 1, 1000]}
+        self.customers = {}
+        self.accounts = {}
 
     def add_customer(self, customer):
         if customer.id not in self.customers:
