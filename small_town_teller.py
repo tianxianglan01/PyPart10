@@ -80,13 +80,19 @@ class Bank:
             return
 
     def save_data(self):
+        currentInfo = [self.customers, self.accounts]
         with open('/Users/sean/labs/PyPart10/cust_accounts saved', 'wb') as f:
-            pickle.dump(self.customers, f)
-            pickle.dump(self.accounts, f)
+            pickle.dump(currentInfo, f)
 
     def load_data(self):
         with open('/Users/sean/labs/PyPart10/cust_accounts saved', 'rb') as f:
             loaded = pickle.load(f)
-        print(loaded)
+        del(self.customers)
+        del(self.accounts)
+        self.customers = loaded[0]
+        self.accounts = loaded[1]
+        #print(type(loaded))
+        print(self.customers)
+        print(self.accounts)
         #return loaded
     
