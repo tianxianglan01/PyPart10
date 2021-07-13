@@ -31,7 +31,7 @@ From an interactive terminal, you should be able to import these classes an inte
 **Constraints**
 
 * When attempting to register a customer, the customer id must be unique.
-* When attempting to add an account, the user associated with said account must already registered as a customer.
+* When attempting to add an account, the user associated with said account must already be registered as a customer.
 * When attempting to add an account, the account number must be unique.
 
 
